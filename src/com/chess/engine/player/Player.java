@@ -12,8 +12,6 @@ import com.chess.engine.pieces.Piece;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
 
-import static com.chess.engine.pieces.Piece.PieceType.KING;
-
 public abstract class Player {
 	protected final Board board;
 	protected final King playerKing;

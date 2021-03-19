@@ -33,7 +33,10 @@ public abstract class Move {
 		return getCurrentCoordinate() == otherMove.getCurrentCoordinate() && getDestinationCoordinate() == otherMove.getDestinationCoordinate() && getMovedPiece().equals(otherMove.getMovedPiece());
 	}
 	public int getCurrentCoordinate() {
-		return this.getMovedPiece().getPiecePosition();
+		if(getMovedPiece() != null) {
+			return this.getMovedPiece().getPiecePosition();
+		}
+		else return -1;
 	}
 	public Board execute() {
 		final Builder builder = new Builder();
@@ -202,7 +205,7 @@ public abstract class Move {
 		}
 	}
 	public static class MoveFactory {
-		 private static final Move NULL_MOVE = new NullMove();
+		private static final Move NULL_MOVE = new NullMove();
         private MoveFactory() {
             throw new RuntimeException("Not instantiatable!");
         }

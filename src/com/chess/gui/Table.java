@@ -82,6 +82,10 @@ public class Table {
 		return fileMenu;
 	}
 	private class BoardPanel extends JPanel {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 8476274683129686682L;
 		final List<TilePanel> boardTiles;
 		BoardPanel() {
 			super(new GridLayout(8,8));
@@ -105,6 +109,10 @@ public class Table {
 		}
 	}
 	private class TilePanel extends JPanel {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -7422649159688110893L;
 		private final int tileId;
 		TilePanel(final BoardPanel boardPanel, final int tileId) {
 			super(new GridBagLayout());
